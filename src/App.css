@@ -1,4 +1,4 @@
-.counter {
+/* .counter {
   font-size: 16px;
   padding: 5px 10px;
   border-radius: 5px;
@@ -181,4 +181,44 @@
     right: 0;
     border-right-color: var(--border);
   }
+} */
+.netflix-navbar {
+  background-color: #000000 !important;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  transition: background-color 0.5s;
+}
+
+.netflix-link.nav-link {
+  color: #e5e5e5 !important;
+  font-size: 0.85rem !important;
+  font-weight: 400;
+  margin-left: 5px;
+  transition: color 0.3s ease;
+}
+
+.netflix-link.nav-link:hover, 
+.netflix-link.nav-link.active {
+  color: #ffffff !important;
+}
+
+.netflix-dropdown .dropdown-toggle::after {
+  display: none !important;
+}
+
+.netflix-dropdown .dropdown-menu {
+  background-color: rgba(0, 0, 0, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 2px;
+  margin-top: 15px;
+}
+
+.netflix-dropdown .dropdown-item {
+  color: #ffffff !important;
+  font-size: 0.8rem;
+  padding: 8px 20px;
+}
+
+.netflix-dropdown .dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  text-decoration: underline;
 }
