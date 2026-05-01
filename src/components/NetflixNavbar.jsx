@@ -2,7 +2,7 @@ import { Component } from "react";
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import LogoNetflix from "./LogoNetflix";
 import AvatarIcon from "./AvatarIcon";
-
+import { IoReorderThree } from "react-icons/io5";
 class NetflixNavbar extends Component {
   render() {
     return (
@@ -19,10 +19,7 @@ class NetflixNavbar extends Component {
           </Navbar.Brand>
 
           <Navbar.Toggle aria-controls="basic-navbar-nav" className="border-0">
-            <ion-icon
-              name="reorder"
-              style={{ color: "white", fontSize: "1.8rem" }}
-            ></ion-icon>
+            <IoReorderThree style={{ color: "white", fontSize: "2rem" }} />
           </Navbar.Toggle>
 
           <Navbar.Collapse id="basic-navbar-nav">
