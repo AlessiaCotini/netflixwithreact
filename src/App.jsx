@@ -1,5 +1,11 @@
+import NetflixNavbar from "./components/NetflixNavbar";
+
 function App() {
-  return <></>;
+  return (
+    <>
+      <NetflixNavbar />
+    </>
+  );
 }
 
 export default App;
