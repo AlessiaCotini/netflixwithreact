@@ -6,7 +6,6 @@ class NetflixCarousel extends Component {
   render() {
     return (
       <Container fluid className="px-4 mb-5">
-        <h4>New releases</h4>
         <Carousel
           id="carouselExample2"
           indicators={false}

@@ -11,7 +11,7 @@ class SlideCarousel extends Component {
   };
 
   getImg = () => {
-    fetch(link + "Harry Potter")
+    fetch(link + "harry potter")
       .then((response) => {
         if (response.ok) {
           return response.json();
@@ -42,7 +42,7 @@ class SlideCarousel extends Component {
   render() {
     return (
       <Container fluid className="px-4 mt-4">
-        <h4 className="text-white mb-3">{this.props.title || "Movies"}</h4>
+        <h4 className="text-white mb-3">Sci-fi movies and series</h4>
 
         {this.state.isLoading && (
           <div className="d-flex justify-content-center my-5">
