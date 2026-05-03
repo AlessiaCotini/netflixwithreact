@@ -6,6 +6,7 @@ import NetflixCarouselTwo from "./NetflixCarouselTwo";
 import NetflixCarouselTree from "./NetflixCarouselTree";
 import Article from "./components/Article";
 import NetflixFooter from "./NetflixFooter";
+import EditProfile from "./EditProfile";
 function App() {
   return (
     <>
@@ -13,6 +14,7 @@ function App() {
         <NetflixNavbar />
       </header>
       <main className="bg-black text-white">
+        {/* <EditProfile /> */}
         <Article />
         <NetflixCarousel />
         <NetflixCarouselTwo />
