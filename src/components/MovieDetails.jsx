@@ -19,6 +19,12 @@ const MovieDetails = () => {
 
         const commentsResp = await fetch(
           `https://striveschool-api.herokuapp.com/api/comments/${movieId}`,
+          {
+            headers: {
+              Authorization:
+                "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OWYzM2UzYWYwNDIwZDAwMTUxNTVhNjciLCJpYXQiOjE3Nzc1NDg4NTgsImV4cCI6MTc3ODc1ODQ1OH0.62LnJWSbfVbpl0zzC3UgMPybFX4Rxqxkv4X8DdQI9II",
+            },
+          },
         );
 
         if (commentsResp.ok) {
