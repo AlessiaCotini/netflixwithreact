@@ -183,7 +183,6 @@
   }
 } */
 .netflix-navbar {
-  background-color: #000000 !important;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   transition: background-color 0.5s;
 }
@@ -247,4 +246,42 @@
 
 .btn:focus {
   box-shadow: none !important;
+}
+.search-box {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: 1px solid transparent;
+  padding: 5px;
+  transition: all 0.4s ease; /* Gestisce l'animazione */
+}
+
+
+.search-box.active {
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid white;
+}
+
+.search-input {
+  width: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  outline: none;
+  color: white;
+  transition: width 0.4s ease, padding 0.4s ease;
+  opacity: 0;
+}
+
+.search-box.active .search-input {
+  width: 200px; /* Larghezza finale desiderata */
+  padding: 0 10px;
+  opacity: 1;
+}
+
+.search-box button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
 }

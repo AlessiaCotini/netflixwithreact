@@ -3,20 +3,22 @@ import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import LogoNetflix from "./LogoNetflix";
 import AvatarIcon from "./AvatarIcon";
 import { IoReorderThree } from "react-icons/io5";
+import NavbarSearch from "./NavbarSearch";
+import { Link } from "react-router";
 class NetflixNavbar extends Component {
   render() {
     return (
       <Navbar
         expand="lg"
         variant="dark"
-        className="netflix-navbar px-4"
+        className="netflix-navbar px-4 bg-black text-light"
         fluid="true"
       >
         <Container fluid className="px-0">
           {/* LOGO */}
-          <Navbar.Brand href="#" className="me-4">
+          <Link to="/" className="me-4 nav-brand">
             <LogoNetflix />
-          </Navbar.Brand>
+          </Link>
 
           <Navbar.Toggle aria-controls="basic-navbar-nav" className="border-0">
             <IoReorderThree style={{ color: "white", fontSize: "2rem" }} />
@@ -25,12 +27,12 @@ class NetflixNavbar extends Component {
           <Navbar.Collapse id="basic-navbar-nav">
             {/* PARTE SINISTRA */}
             <Nav className="me-auto">
-              <Nav.Link href="#" active className="netflix-link">
+              <Link to="/" active className="nav-link text-light">
                 Home
-              </Nav.Link>
-              <Nav.Link href="#" className="netflix-link">
+              </Link>
+              <Link to="/tvshows" className="nav-link text-light">
                 TV Shows
-              </Nav.Link>
+              </Link>
               <Nav.Link href="#" className="netflix-link">
                 Movies
               </Nav.Link>
@@ -44,12 +46,7 @@ class NetflixNavbar extends Component {
 
             {/* PARTE DESTRA */}
             <div className="d-flex align-items-center gap-3">
-              <button className="btn text-white p-0">
-                <ion-icon
-                  name="search"
-                  style={{ fontSize: "1.3rem" }}
-                ></ion-icon>
-              </button>
+              <NavbarSearch />
 
               <span
                 className="text-white netflix-link d-none d-lg-block"
@@ -76,8 +73,12 @@ class NetflixNavbar extends Component {
                 id="profile-dropdown"
                 className="netflix-dropdown"
               >
-                <NavDropdown.Item href="#">Settings</NavDropdown.Item>
-                <NavDropdown.Item href="#">Profile</NavDropdown.Item>
+                <Link to="/settings" className="nav-link text-light p-3">
+                  Settings
+                </Link>
+                <Link to="/profile" className="nav-link text-light p-3">
+                  Profile
+                </Link>
                 <NavDropdown.Divider className="bg-secondary" />
                 <NavDropdown.Item href="#" className="fw-bold">
                   Log Out

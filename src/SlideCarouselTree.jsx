@@ -1,6 +1,6 @@
 import { Component } from "react";
 import { Row, Col, Spinner, Alert, Container } from "react-bootstrap";
-
+import { Link } from "react-router";
 const link = "http://www.omdbapi.com/?apikey=bdbe4e58&s=";
 
 class SlideCarouselTree extends Component {
@@ -59,7 +59,10 @@ class SlideCarouselTree extends Component {
             <Row className="row-cols-2 row-cols-md-4 row-cols-lg-6 g-2">
               {this.state.movies.map((movie) => (
                 <Col key={movie.imdbID}>
-                  <div className="netflix-card-container">
+                  <Link
+                    to={`/movie-details/${movie.imdbID}`}
+                    className="netflix-card-container"
+                  >
                     <img
                       src={
                         movie.Poster !== "N/A"
@@ -69,7 +72,7 @@ class SlideCarouselTree extends Component {
                       className="img-fluid rounded netflix-img"
                       alt={movie.Title}
                     />
-                  </div>
+                  </Link>
                 </Col>
               ))}
             </Row>
